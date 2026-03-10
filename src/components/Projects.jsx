@@ -9,10 +9,10 @@ const projects = [
     tech: ['React', 'TypeScript', 'Node.js', 'JWT', 'AWS S3', 'Tailwind CSS'],
     color: '#f59e0b',
     icon: '🔏',
-    live: '#',
-    github: '#',
+    live: 'https://document-signature-frontend-cf8g.vercel.app/',
+    github: 'https://github.com/shishvishwakarma995-png',
     featured: true,
-    comingSoon: true
+    comingSoon: false
   },
   {
     title: 'Job Application Tracker',
@@ -42,7 +42,7 @@ const projects = [
     tech: ['React', 'Framer Motion', 'JavaScript'],
     color: '#a855f7',
     icon: '🎨',
-    live: '#',
+    live: 'https://portfolio-iota-weld-99.vercel.app/',
     github: '#',
     featured: false,
     comingSoon: false
@@ -79,31 +79,17 @@ const ProjectCard = ({ project, index, inView }) => (
       pointerEvents: 'none'
     }} />
 
-    {/* Badges */}
-    <div style={{ position: 'absolute', top: '1.2rem', right: '1.2rem', display: 'flex', gap: '0.4rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-      {project.comingSoon && (
-        <motion.div
-          animate={{ opacity: [1, 0.6, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          style={{
-            background: `${project.color}20`, border: `1px solid ${project.color}50`,
-            borderRadius: '50px', padding: '0.2rem 0.75rem',
-            color: project.color, fontSize: '0.65rem', fontWeight: 800, letterSpacing: '0.08em'
-          }}
-        >
-          🚧 IN PROGRESS
-        </motion.div>
-      )}
-      {project.featured && !project.comingSoon && (
-        <div style={{
-          background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.3)',
-          borderRadius: '50px', padding: '0.2rem 0.7rem',
-          color: '#a5b4fc', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em'
-        }}>
-          ★ FEATURED
-        </div>
-      )}
-    </div>
+    {/* Featured badge */}
+    {project.featured && (
+      <div style={{
+        position: 'absolute', top: '1.2rem', right: '1.2rem',
+        background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.3)',
+        borderRadius: '50px', padding: '0.2rem 0.7rem',
+        color: '#a5b4fc', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em'
+      }}>
+        ★ FEATURED
+      </div>
+    )}
 
     <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{project.icon}</div>
 
@@ -132,38 +118,25 @@ const ProjectCard = ({ project, index, inView }) => (
 
     {/* Links */}
     <div style={{ display: 'flex', gap: '0.75rem' }}>
-      {project.comingSoon ? (
-        <div style={{
-          background: `${project.color}15`, border: `1px solid ${project.color}30`,
-          color: project.color, padding: '0.5rem 1.4rem',
-          borderRadius: '50px', fontSize: '0.8rem', fontWeight: 700,
-          display: 'flex', alignItems: 'center', gap: '0.4rem'
-        }}>
-          🔒 Coming Soon
-        </div>
-      ) : (
-        <>
-          <motion.a
-            href={project.github} target="_blank" whileHover={{ scale: 1.05 }}
-            style={{
-              background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
-              color: 'rgba(255,255,255,0.6)', padding: '0.5rem 1.2rem',
-              borderRadius: '50px', fontSize: '0.8rem', fontWeight: 600,
-              textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.4rem'
-            }}
-          >⚙ GitHub</motion.a>
-          <motion.a
-            href={project.live} target="_blank"
-            whileHover={{ scale: 1.05, boxShadow: `0 0 20px ${project.color}44` }}
-            style={{
-              background: `linear-gradient(135deg, ${project.color}, ${project.color}cc)`,
-              color: 'white', padding: '0.5rem 1.2rem',
-              borderRadius: '50px', fontSize: '0.8rem', fontWeight: 600,
-              textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.4rem'
-            }}
-          >↗ Live Demo</motion.a>
-        </>
-      )}
+      <motion.a
+        href={project.github} target="_blank" whileHover={{ scale: 1.05 }}
+        style={{
+          background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
+          color: 'rgba(255,255,255,0.6)', padding: '0.5rem 1.2rem',
+          borderRadius: '50px', fontSize: '0.8rem', fontWeight: 600,
+          textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.4rem'
+        }}
+      >⚙ GitHub</motion.a>
+      <motion.a
+        href={project.live} target="_blank"
+        whileHover={{ scale: 1.05, boxShadow: `0 0 20px ${project.color}44` }}
+        style={{
+          background: `linear-gradient(135deg, ${project.color}, ${project.color}cc)`,
+          color: 'white', padding: '0.5rem 1.2rem',
+          borderRadius: '50px', fontSize: '0.8rem', fontWeight: 600,
+          textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.4rem'
+        }}
+      >↗ Live Demo</motion.a>
     </div>
   </motion.div>
 )
