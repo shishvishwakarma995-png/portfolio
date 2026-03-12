@@ -10,7 +10,7 @@ const About = () => {
     <section id="about" ref={ref} style={{ padding: '8rem 2rem', maxWidth: 1100, margin: '0 auto' }}>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
 
-        {/* Left — Image placeholder with glow */}
+        {/* Left — Image */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -52,7 +52,7 @@ const About = () => {
                 zIndex: 2
               }}
             >
-              🎓 B.Sc Biotech
+              💼 Innovexis Intern
             </motion.div>
             <motion.div
               animate={{ y: [5, -5, 5] }}
@@ -63,10 +63,11 @@ const About = () => {
                 backdropFilter: 'blur(10px)',
                 borderRadius: '12px', padding: '0.6rem 1rem',
                 color: 'white', fontSize: '0.75rem', fontWeight: 700,
-                boxShadow: '0 8px 32px rgba(16,185,129,0.4)'
+                boxShadow: '0 8px 32px rgba(16,185,129,0.4)',
+                zIndex: 2
               }}
             >
-              ⚡ Django & React
+              ⚡ React & TypeScript
             </motion.div>
           </div>
         </motion.div>
@@ -89,17 +90,17 @@ const About = () => {
             A developer who thinks <span style={{ color: '#818cf8' }}>differently</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.45)', lineHeight: 1.9, marginBottom: '1rem', fontSize: '0.95rem' }}>
-            I'm a Biotechnology graduate who fell in love with programming. This unique background gives me a different perspective on problem-solving — I approach code like a scientist: methodically, curiously, and always looking for elegant solutions.
+            I'm a Biotechnology graduate who fell in love with programming. Currently interning as a Full Stack Developer at <span style={{ color: '#818cf8', fontWeight: 600 }}>Innovexis</span>, where I built SignVault — an enterprise document signing SaaS similar to DocuSign, using React, TypeScript, Node.js, and AWS S3.
           </p>
           <p style={{ color: 'rgba(255,255,255,0.35)', lineHeight: 1.9, marginBottom: '2rem', fontSize: '0.9rem' }}>
-            I specialize in building full-stack web applications with Python/Django on the backend and React on the frontend, with a strong focus on clean UI and great user experience.
+            My Biotech background gives me a unique perspective on problem-solving — I approach code like a scientist: methodically, curiously, and always looking for elegant solutions. I specialize in full-stack development with a strong focus on clean UI and great user experience.
           </p>
 
           {/* Stats */}
           <div style={{ display: 'flex', gap: '2rem' }}>
             {[
               { num: '4+', label: 'Projects Built' },
-              { num: '5+', label: 'Tech Stack' },
+              { num: '1', label: 'Internship' },
               { num: '100%', label: 'Passion' }
             ].map((s, i) => (
               <motion.div
