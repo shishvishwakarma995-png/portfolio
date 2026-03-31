@@ -99,7 +99,7 @@ const About = () => {
           {/* Stats */}
           <div style={{ display: 'flex', gap: '2rem' }}>
             {[
-              { num: '4+', label: 'Projects Built' },
+              { num: '5+', label: 'Projects Built' },
               { num: '1', label: 'Internship' },
               { num: '100%', label: 'Passion' }
             ].map((s, i) => (

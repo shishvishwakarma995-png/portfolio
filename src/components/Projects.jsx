@@ -4,6 +4,17 @@ import { useRef } from 'react'
 
 const projects = [
   {
+    title: 'Cloud Drive',
+    desc: 'A Google Drive-style cloud storage app — upload, organize, and share files with folder hierarchy, granular permissions, public sharing links, real-time search, and trash with restore. Built with enterprise-grade security and scalable architecture.',
+    tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Supabase', 'AWS S3', 'JWT'],
+    color: '#3b82f6',
+    icon: '☁️',
+    live: 'https://cloud-drive-frontend-ten.vercel.app/',
+    github: 'https://github.com/shishvishwakarma995-png',
+    featured: true,
+    comingSoon: false
+  },
+  {
     title: 'SignVault',
     desc: 'An enterprise-grade document signing SaaS — upload documents, place digital signatures, share signing links, and generate legally traceable signed PDFs. Built with full audit trails, signer identity verification, and real-world enterprise workflows. Think DocuSign, but yours.',
     tech: ['React', 'TypeScript', 'Node.js', 'JWT', 'AWS S3', 'Tailwind CSS'],
